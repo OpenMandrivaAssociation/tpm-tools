@@ -17,6 +17,7 @@ BuildRequires:	trousers-devel
 BuildRequires:	opencryptoki-devel
 BuildRequires:	openssl-devel
 Requires:       trousers
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 tpm-tools is a group of tools to manage and utilize the Trusted Computing
