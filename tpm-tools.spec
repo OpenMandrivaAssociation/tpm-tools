@@ -99,7 +99,7 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc LICENSE README
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
 %files pkcs11
 %defattr(-,root,root,-)
