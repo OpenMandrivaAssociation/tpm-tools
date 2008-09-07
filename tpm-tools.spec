@@ -4,12 +4,13 @@
 
 Summary:	Management tools for the TPM hardware
 Name:		tpm-tools
-Version:	1.2.5.1
-Release:	%mkrel 4
+Version:	1.3.1
+Release:	%mkrel 1
 Group:		System/Servers
 License:	CPL
 URL:		http://www.sf.net/projects/trousers
 Source0:	http://downloads.sourceforge.net/trousers/%{name}-%{version}.tar.gz
+Patch0:		tpm-tools-linkage_fix.diff
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -17,7 +18,7 @@ BuildRequires:	trousers-devel
 BuildRequires:	opencryptoki-devel
 BuildRequires:	openssl-devel
 Requires:       trousers
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 tpm-tools is a group of tools to manage and utilize the Trusted Computing
@@ -61,6 +62,7 @@ store, and protect data.
 %prep
 
 %setup -q
+%patch0 -p0
 
 %build
 rm -rf autom4te.cache 
