@@ -1,15 +1,16 @@
 %define major 0
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
+%define srcversion 1.3.3-2
 
 Summary:	Management tools for the TPM hardware
 Name:		tpm-tools
-Version:	1.3.1
-Release:	%mkrel 2
+Version:	1.3.3
+Release:	%mkrel 1
 Group:		System/Servers
 License:	CPL
 URL:		http://www.sf.net/projects/trousers
-Source0:	http://downloads.sourceforge.net/trousers/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/trousers/%{name}-%{srcversion}.tar.gz
 Patch0:		tpm-tools-linkage_fix.diff
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -60,9 +61,9 @@ You can import keys and certificates, list out the objects in the data
 store, and protect data.
 
 %prep
-
 %setup -q
 %patch0 -p0
+sed -i -e "s/-Wall -Werror//" configure*
 
 %build
 rm -rf autom4te.cache 
@@ -111,6 +112,5 @@ rm -rf %{buildroot}
 %dir %{_includedir}/tpm_tools
 %{_includedir}/tpm_tools/*.h
 %{_libdir}/*.so
-%{_libdir}/*.a
 %{_libdir}/*.la
 %{_mandir}/man3/tpmUnseal*
