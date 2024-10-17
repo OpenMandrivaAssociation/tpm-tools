@@ -9,7 +9,7 @@ Version:	1.3.3
 Release:	%mkrel 3
 Group:		System/Servers
 License:	CPL
-URL:		http://www.sf.net/projects/trousers
+URL:		https://www.sf.net/projects/trousers
 Source0:	http://downloads.sourceforge.net/trousers/%{name}-%{srcversion}.tar.gz
 Patch0:		tpm-tools-linkage_fix.diff
 BuildRequires:	autoconf
