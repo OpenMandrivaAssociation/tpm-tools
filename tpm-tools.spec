@@ -12,6 +12,8 @@ License:	CPL
 URL:		https://www.sf.net/projects/trousers
 Source0:	http://downloads.sourceforge.net/trousers/%{name}-%{srcversion}.tar.gz
 Patch0:		tpm-tools-linkage_fix.diff
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
