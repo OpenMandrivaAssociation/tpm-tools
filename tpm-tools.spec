@@ -6,7 +6,7 @@
 Summary:	Management tools for the TPM hardware
 Name:		tpm-tools
 Version:	1.3.3
-Release:	%mkrel 3
+Release:	4
 Group:		System/Servers
 License:	CPL
 URL:		https://www.sf.net/projects/trousers
